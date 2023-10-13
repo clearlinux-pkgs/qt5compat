@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : qt5compat
-Version  : 6.5.3
-Release  : 1
-URL      : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qt5compat-everywhere-src-6.5.3.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qt5compat-everywhere-src-6.5.3.tar.xz
+Version  : 6.6.0
+Release  : 2
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qt5compat-everywhere-src-6.6.0.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qt5compat-everywhere-src-6.6.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0
@@ -53,15 +53,15 @@ license components for the qt5compat package.
 
 
 %prep
-%setup -q -n qt5compat-everywhere-src-6.5.3
-cd %{_builddir}/qt5compat-everywhere-src-6.5.3
+%setup -q -n qt5compat-everywhere-src-6.6.0
+cd %{_builddir}/qt5compat-everywhere-src-6.6.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696285120
+export SOURCE_DATE_EPOCH=1697210077
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -97,7 +97,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696285120
+export SOURCE_DATE_EPOCH=1697210077
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt5compat
 cp %{_builddir}/qt5compat-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt5compat/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -125,20 +125,20 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qbinaryjson_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qbinaryjsonarray_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qbinaryjsonobject_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qbinaryjsonvalue_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qcodecmacros_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qicucodec_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qisciicodec_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qlatincodec_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qsimplecodec_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qtcore5compat-config_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qtextcodec_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qtsciicodec_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qutfcodec_p.h
-/usr/include/QtCore5Compat/6.5.3/QtCore5Compat/private/qxml_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qbinaryjson_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qbinaryjsonarray_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qbinaryjsonobject_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qbinaryjsonvalue_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qcodecmacros_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qicucodec_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qisciicodec_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qlatincodec_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qsimplecodec_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qtcore5compat-config_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qtextcodec_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qtsciicodec_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qutfcodec_p.h
+/usr/include/QtCore5Compat/6.6.0/QtCore5Compat/private/qxml_p.h
 /usr/include/QtCore5Compat/QBinaryJson
 /usr/include/QtCore5Compat/QConcatenable
 /usr/include/QtCore5Compat/QLinkedList
@@ -194,7 +194,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libQt6Core5Compat.so.6
-/usr/lib64/libQt6Core5Compat.so.6.5.3
+/usr/lib64/libQt6Core5Compat.so.6.6.0
 
 %files license
 %defattr(0644,root,root,0755)

@@ -6,10 +6,10 @@
 # autospec commit: c02b2fe
 #
 Name     : qt5compat
-Version  : 6.6.2
-Release  : 8
-URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qt5compat-everywhere-src-6.6.2.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qt5compat-everywhere-src-6.6.2.tar.xz
+Version  : 6.6.3
+Release  : 9
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qt5compat-everywhere-src-6.6.3.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qt5compat-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0
@@ -18,7 +18,6 @@ Requires: qt5compat-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : icu4c-dev
-BuildRequires : mesa-dev
 BuildRequires : qt6base-dev
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -56,15 +55,15 @@ license components for the qt5compat package.
 
 
 %prep
-%setup -q -n qt5compat-everywhere-src-6.6.2
-cd %{_builddir}/qt5compat-everywhere-src-6.6.2
+%setup -q -n qt5compat-everywhere-src-6.6.3
+cd %{_builddir}/qt5compat-everywhere-src-6.6.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711159893
+export SOURCE_DATE_EPOCH=1711484750
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -125,7 +124,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711159893
+export SOURCE_DATE_EPOCH=1711484750
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt5compat
 cp %{_builddir}/qt5compat-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt5compat/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -156,20 +155,20 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qbinaryjson_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qbinaryjsonarray_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qbinaryjsonobject_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qbinaryjsonvalue_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qcodecmacros_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qicucodec_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qisciicodec_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qlatincodec_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qsimplecodec_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qtcore5compat-config_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qtextcodec_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qtsciicodec_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qutfcodec_p.h
-/usr/include/QtCore5Compat/6.6.2/QtCore5Compat/private/qxml_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qbinaryjson_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qbinaryjsonarray_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qbinaryjsonobject_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qbinaryjsonvalue_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qcodecmacros_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qicucodec_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qisciicodec_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qlatincodec_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qsimplecodec_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qtcore5compat-config_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qtextcodec_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qtsciicodec_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qutfcodec_p.h
+/usr/include/QtCore5Compat/6.6.3/QtCore5Compat/private/qxml_p.h
 /usr/include/QtCore5Compat/QBinaryJson
 /usr/include/QtCore5Compat/QConcatenable
 /usr/include/QtCore5Compat/QLinkedList
@@ -238,11 +237,11 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libQt6Core5Compat.so.6.6.2
+/V3/usr/lib64/libQt6Core5Compat.so.6.6.3
 /V3/usr/lib64/qt6/qml/Qt5Compat/GraphicalEffects/libqtgraphicaleffectsplugin.so
 /V3/usr/lib64/qt6/qml/Qt5Compat/GraphicalEffects/private/libqtgraphicaleffectsprivateplugin.so
 /usr/lib64/libQt6Core5Compat.so.6
-/usr/lib64/libQt6Core5Compat.so.6.6.2
+/usr/lib64/libQt6Core5Compat.so.6.6.3
 /usr/lib64/qt6/metatypes/qt6core5compat_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/Core5Compat.json
 /usr/lib64/qt6/qml/Qt5Compat/GraphicalEffects/Blend.qml

@@ -1,3 +1,4 @@
+libQt6Core5Compat.so.6:NonQt
 libQt6Core5Compat.so.6:Qt_6
 libQt6Core5Compat.so.6:Qt_6_PRIVATE_API
 libQt6Core5Compat.so.6:_Z21qt_regexp_toCanonicalRK7QStringN7QRegExp13PatternSyntaxE
